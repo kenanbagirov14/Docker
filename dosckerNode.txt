@@ -1,0 +1,65 @@
+Docker => Emeliyyat sistemi ile containerler arasinda elqeni yaradan bir platformadir bir app dir 
+
+Container => ozune aod Proses servis networku olan eyni emeliyyat siteminde ya da vm(virtual mashine)
+uzerinde isliyen izole (ayri) bir strukturdur bir platformadir 
+
+VM e oxsayir ama vm in oz emeliyyat sitemi olur containerler ise 
+qurulu oldugu emeliyyat siteminin temelini(Kerneli) istifade edir
+
+Container 10 den coxdur ki movcuddr 
+container tipleri 
+LXC,LXD,LXCFS 
+Docker ise LXC tipinden istifade edir 
+Docker containerleri idare etmek ucun bir cox High level(yuxari seviyye)
+funksiya ya sistem teqdim edir 
+
+Containerler yukulu oldugu emeliyyat siteminin kernel ini istifade edirler 
+ve ozlerine aid aslilig ve library ler var Docker ise bu containelrlerin 
+emeliyyat sisteminin kernalindan istifade etmek ucun vasitedir 
+yeni emeliyyat istemi ile containerler arasinda elaqe qurur demey olar 
+Linux emeliyyat sitemi yukulu olan sitstemde windows a uygun hazirlanmis app 
+yazilsa islemeyeck cunku emeliyyat siteminin temeli Linux dur ve conatiner de 
+Linuxun kernelini istifade etmek mecburiyyetindedir bu sebebden islemeyecek
+eyni emeliyyati windows emeliyyat istemi olan serverde ya da compda etmek olmur cunki 
+windows  emeliyyat sitemi olan bir comp ya servere doclker yuklenende
+docker containerler ile arasina bir linux emeliyyat sisteminin kernelini yukluyur 
+ve yene containerler linux es den istifade edirler 
+windows esasli container istifade etmek ucun Docker i windows emeliyyat sitemine yox windos server uzerine yuklemek lazimidr  server  
+Docker conatiner leri idare etmek ucun bize imkan verir
+
+Bunu nece edir =>
+Biz oz yazdigimiz containeri de istifade ede bilerik 
+hazir yailmis containeri de istifade edib oz app lerimiz 
+bu containerlere yukleye bilerik 
+Container bir app in isleyen versiyasidir yeni prosses kimi 
+app islemeyen versiyai ise in=mage dir program kimi 
+
+Image =>icinde mueyeyyen codlar libraryler app lar olan bir pltaformadir 
+Meselen bir mySql yuklenib mysql islemirse bu image dir islmeye baslayanda container ler ortaya cixar 
+Imagle ler esasen DockerHub uzerinden catmaq olar 
+
+Imagler i isledende emele gelen bir proses dir de demey olar 
+bir image den bir nece dene Container yaradila biler 
+
+Docker compa yuklenende buna docker host ve ya docker engine deyiler
+
+docker host => docker uzerinde her hansi bir image i run edende 
+eger hemin image docker hostda movcud deyilse birinci 
+image docker hosta yuklenecek sora run olacaq 
+
+Verified publisher => resmi olaraq docker hubs yuklenen
+Offical image =>qeyri resmi olan docker terefinden dockerize edilib docker huba yuklenib
+
+her bir image in ozune aid unic Id si var 
+
+it => eger app run dan sora terminalda nese input girmeyi teleb edirse 
+ run dan qabag it(interactive terminale) demey lazimdir
+
+Port Mapping =>Docker de her hansi bir image den container run etdikde 
+bu container ler docker host uzerinde isleyir ve her birinin ayri bir Ip si olur 
+he her biri de mueyyen bir port uzerinden service edilir
+hemin containere qosulmaq isdesen eger (mesele mssql yukleyib ona qosulub islemek isdesek)
+bunu bir basa ede bilmirik birinci gerek docker hosta qosulaq ondan 
+sora hemin containerin service edildiyi porta qosulmaq lazimdir 
+ki bunun ucun de port mapping edilir yeni hemin run olmus containere bir xarici port veririk 
+xa
